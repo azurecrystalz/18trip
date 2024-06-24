@@ -442,6 +442,7 @@
   * {
     box-sizing: border-box;
   }
+  
 
   html,
   body {
@@ -453,6 +454,42 @@
     place-items: center;
   }
 
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+  
   .page-content {
     padding: 1rem;
     font-family: var(--font-sans);
@@ -560,6 +597,10 @@
 
 
 <h2>Hello passengers! This masterlist is under construction, since I'm still making some preparations before take off! In the meantime, you can find my 18trip translations <a href="azurecrystalz.tumblr.com">here on my tumblr</a>! HAMA nice trip !!</h2>
+<div class="container">
+  <a href=[LINK]><img src="/18trip/kugunovel.jpeg" alt="Novel" class="Novel"></a>
+  <div class="overlay">Domeki Kuguri Novel "S.139, R.2B"</div>
+</div>
         
       </div>
 
