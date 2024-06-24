@@ -457,8 +457,7 @@
 /* Container needed to position the overlay. Adjust the width as needed */
 .container {
   position: relative;
-  width: 90%;
-  max-width: 300px;
+  --link-hover-bg: #ffffff00;
 }
 
 /* Make the image to responsive */
@@ -467,6 +466,7 @@
   width: 100%;
   height: auto;
   border-radius: 2px;
+  margin-bottom: 0em;
 }
 
 /* The overlay effect - lays on top of the container and over the image */
@@ -565,6 +565,9 @@
   @media (max-width: 768px) {
     .grid-container {
       display: block;
+    }
+    .overlay{
+      padding: 10px;
     }
     .item {
       display: flex;
