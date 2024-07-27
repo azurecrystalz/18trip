@@ -340,104 +340,10 @@
     color: #F486AA
 }
 
-@keyframes rotate {
-  0% {transform: rotate(0)}
-  25% {transform: rotate(90deg)}
-  50% {transform: rotate(180deg)}
-  75% {transform: rotate(270deg)}
-  100% {transform: rotate(360deg)}
-}
-
-#songs {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 15px;
-}
-
-#songs .song-item {
-  width: 200px;
-}
-
-#songs .song-figure {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-block-start: 0em;
-  margin-inline-start: 0px;
-}
-
-#songs .song-figure .song-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  transition: transform 1.33s;
-}
-
-#songs .song-figure .song-image.rotate {
-  animation: rotate 12s linear 0s infinite forwards;
-}
-
-#songs .song-figure .song-caption:link, #songs .song-figure .song-caption:visited {
-  color: var(--V98);
-}
-
-#songs .song-figure:hover > .song-image {
-  filter: blur(4px);
-}
-
-#songs .song-figure .song-caption {
-  position: absolute;
-  visibility: hidden;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-49%, -49%);
-  z-index: 5;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-#songs .song-figure:hover > .song-caption {
-  visibility: visible;
-}
 
 @media only screen and (max-width: 600px) {
     .stories {
         grid-template-columns:repeat(auto-fill,minmax(100px,1fr))
-    }
-
-    #songs {
-      grid-template-columns: 1fr;
-      justify-content: center;
-    }
-
-    #songs .song-item {
-      width: 100%;
-      margin-bottom: 5%;
-    }
-
-    #songs .song-figure {
-      margin: auto;
-      width: 60vw;
-      height: 60vw;
-    }
-
-    #songs .song-figure .song-image {
-      width: 100%;
-      height: 100%;
-    }
-
-    #songs .song-figure .song-caption {
-      visibility: visible;
-      width: 80vw;
-      height: 80vw;
     }
 }
 @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
@@ -615,7 +521,7 @@
     .main-grid-container{
       padding-bottom: 0px;
     }
-    .article entry{
+    .article-entry{
       padding: 0px 9px;
     }
     .novel-label{
