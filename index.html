@@ -426,6 +426,25 @@
     gap: 1%;
     padding-bottom: 12px;
   }
+  .newholder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .newfeature{
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform .1s;
+  }
+
+  .newfeature:hover {
+    transform: scale(1.03);
+  }
+
+  .newfeature img{
+    max-width: 135px;
+    max-height: 135px;
+  }
   .item {
     position: relative;
     color: white;
@@ -506,6 +525,9 @@
     }
     #evensB::before {
       background-image: linear-gradient(to right, transparent, #000000bb);
+    }
+    .newholder {
+      grid-template-columns:repeat(auto-fill, minmax(200px,1fr))
     }
     .grid-container {
       display: block;
